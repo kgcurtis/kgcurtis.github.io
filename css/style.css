@@ -11,7 +11,8 @@ body {
 	font-size: 16px;
 	line-height: 1.6em;
   background-image: url(../img/front_page_nologo.jpg);
-  background-size: 600px 500px;
+  background-size: 100%;
+
 }
 
 html {
@@ -179,7 +180,7 @@ img.img-responsive {
 
 #design-title {
   background-image: url(../img/design_title2.png);
-  background-size: 800px;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: 10px;
   width:100%;
@@ -189,7 +190,7 @@ img.img-responsive {
 
 #develop-title {
   background-image: url(../img/develop_title2.png);
-  background-size: 800px;
+  background-size: 100%;
   padding-left: auto;
   background-repeat: no-repeat;
     background-position: 10px;
@@ -203,7 +204,7 @@ img.img-responsive {
 
 #enjoy-title {
   background-image: url(../img/enjoy_title2.png);
-  background-size: 800px;
+  background-size: 100%;
   background-repeat: no-repeat;
     background-position: 10px;
   width:100%;
@@ -333,10 +334,19 @@ hr {
 
 .intro {
 	width:100%;
+  max-width: 1000px;
 	position:relative;	
-	background: url(../img/front_page.jpg) no-repeat top center;
-	background-size: 800px;
+	background: url(../img/front_page.jpg) no-repeat center;
+	background-size: 100%;
   height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-image {
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
 #intro.intro {
