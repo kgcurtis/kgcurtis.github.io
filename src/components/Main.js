@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
-import About from './About';
-import Skills from './Skills';
-import Projects from './Projects';
+import About from './About/About';
+import Skills from './Skills/Skills';
+import Projects from './Projects/Projects';
 
 class Main extends Component {
 

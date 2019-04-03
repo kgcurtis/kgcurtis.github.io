@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Profile from './Profile';
-import Links from './Links';
+import Links from './Links/Links';
 
 class SideBar extends Component {
 

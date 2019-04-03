@@ -8,7 +8,7 @@ class Profile extends Component {
       <div className="profile-image"/>
       <div className="name-position-container">
         <div className="name">Katherine Curtis</div>
-        <div className="position">Software Development Engineer</div>
+        <div className="position">Software Engineer</div>
       </div>
       </div>
     );
