@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Profile from './Profile';
 import Links from './Links';
-import Bio from './Bio';
 
 class SideBar extends Component {
 
@@ -11,7 +10,11 @@ class SideBar extends Component {
         <div className="sidebar-content-container">
           <Profile/>
           <Links/>
-          <Bio/>
+          <div className="bio">
+            Hi, I'm Katherine Curtis. I'm a software engineer currently living in
+            Austin, TX but headed to Seattle, WA to work for Microsoft after
+            graduating from UT Austin in Spring 2019.
+          </div>
         </div>
       </div>
     );
