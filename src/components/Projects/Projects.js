@@ -28,6 +28,11 @@ class Projects extends Component {
               img="resume.png"
               repo="react_resume"
             />
+            <ProjectItem
+              title="Small Jupyter Notebooks"
+              img="jupyter.png"
+              repo="small-jupyter-notebooks"
+            />
           </Row>
         </Container>
       </div>
