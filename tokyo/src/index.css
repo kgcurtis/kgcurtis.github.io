@@ -1,0 +1,6 @@
+@font-face {
+    font-family: "Serena";
+    src: local('Serena'),
+    url(./assets/fonts/Serena.otf) format('opentype'),
+    url(./assets/fonts/Serena.ttf) format('truetype');
+  }
