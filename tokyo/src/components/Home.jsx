@@ -1,8 +1,5 @@
 import React, {useState, useEffect, useRef} from "react";
 import Social from "./Social";
-import debounce from 'lodash.debounce';
-import {isMobile} from 'react-device-detect';
-
 
 const Home = () => {
   const [selected, setSelected] = useState(true);
@@ -16,7 +13,6 @@ const Home = () => {
               onMouseEnter={() => setSelected(!selected)}
               onMouseLeave={() => setSelected(!selected)}
               style={{
-                userSelect: "none",
                 backgroundImage: selected ? "url(assets/img/mayv.png)" : "url(assets/img/sound2.png)",
               }}
             ></div>
