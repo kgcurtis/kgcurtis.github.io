@@ -12,7 +12,6 @@ const HomeDark = () => {
   return (
     <>
       <Tabs>
-        <TabList></TabList>
         {/* END SIDEBAR TABLIST */}
         {/* START RIGHT PART CONTENT */}
         <div className="rightpart">
