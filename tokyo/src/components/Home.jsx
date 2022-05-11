@@ -10,10 +10,10 @@ const Home = () => {
           <div className="avatar">
             <div
               className="image avatar_img"
-              onMouseEnter={() => setSelected(!selected)}
-              onMouseLeave={() => setSelected(!selected)}
-              onClick={() => setSelected(!selected)}
+              onPointerEnter={() => setSelected(!selected)}
+              onPointerLeave={() => setSelected(!selected)}
               style={{
+                userSelect: "none",
                 backgroundImage: selected ? "url(assets/img/mayv.png)" : "url(assets/img/sound2.png)",
               }}
             ></div>
