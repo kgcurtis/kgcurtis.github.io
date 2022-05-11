@@ -10,8 +10,9 @@ const Home = () => {
           <div className="avatar">
             <div
               className="image avatar_img"
-              onPointerEnter={() => setSelected(!selected)}
-              onPointerLeave={() => setSelected(!selected)}
+              onMouseEnter={() => setSelected(!selected)}
+              onMouseLeave={() => setSelected(!selected)}
+              onClick={() => setSelected(!selected)}
               style={{
                 backgroundImage: selected ? "url(assets/img/mayv.png)" : "url(assets/img/sound2.png)",
               }}
