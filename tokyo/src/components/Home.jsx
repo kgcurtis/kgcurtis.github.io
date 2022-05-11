@@ -1,5 +1,7 @@
-import React, {useState, useEffect, useRef} from "react";
+import React, {useState} from "react";
 import Social from "./Social";
+import {isMobile} from 'react-device-detect';
+
 
 const Home = () => {
   const [selected, setSelected] = useState(true);
@@ -10,8 +12,18 @@ const Home = () => {
           <div className="avatar">
             <div
               className="image avatar_img"
-              onMouseEnter={() => setSelected(!selected)}
-              onMouseLeave={() => setSelected(!selected)}
+              onMouseEnter={() => {
+                if(!isMobile) { setSelected(!selected); }
+               }
+             }
+              onMouseLeave={() => {
+                if(!isMobile) { setSelected(!selected); }
+               }
+             }
+              onClick={() => {
+                 if(isMobile) { setSelected(!selected); }
+                }
+              }
               style={{
                 backgroundImage: selected ? "url(assets/img/mayv.png)" : "url(assets/img/sound2.png)",
               }}
