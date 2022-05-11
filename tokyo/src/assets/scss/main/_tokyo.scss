@@ -98,6 +98,13 @@ h6 {
   color: #000;
 }
 
+@font-face {
+  font-family: "Serena";
+  src: local('Serena'),
+  url(fonts/Serena.otf) format('opentype'),
+  url(fonts/Serena.ttf) format('truetype');
+}
+
 h1 {
   font-size: 45px;
 }
