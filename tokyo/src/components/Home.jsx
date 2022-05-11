@@ -1,9 +1,8 @@
-import React, {useState} from "react";
+import React, {useState, useEffect, useRef} from "react";
 import Social from "./Social";
 
 const Home = () => {
   const [selected, setSelected] = useState(true);
-
   return (
     <>
       <div className="tokyo_tm_home">
@@ -11,8 +10,8 @@ const Home = () => {
           <div className="avatar">
             <div
               className="image avatar_img"
-              onMouseLeave={() => setSelected(!selected)}
-              onMouseEnter={() => setSelected(!selected)}
+              onPointerEnter={() => setSelected(!selected)}
+              onPointerLeave={() => setSelected(!selected)}
               style={{
                 backgroundImage: selected ? "url(assets/img/mayv.png)" : "url(assets/img/sound2.png)",
               }}
