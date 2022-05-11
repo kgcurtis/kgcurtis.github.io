@@ -1,8 +1,30 @@
-import React, {useState, useEffect, useRef} from "react";
+import React, {useState, useEffect} from "react";
 import Social from "./Social";
+import {isMobile} from 'react-device-detect';
+
 
 const Home = () => {
   const [selected, setSelected] = useState(true);
+  const [goingUp, setGoingUp] = useState(false);
+  let prevScrollY = 0;
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    if (prevScrollY < currentScrollY) {
+      setGoingUp(false);
+    }
+    if (prevScrollY > currentScrollY) {
+        setGoingUp(true);
+    }
+    prevScrollY = currentScrollY;
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
   return (
     <>
       <div className="tokyo_tm_home">
@@ -10,11 +32,11 @@ const Home = () => {
           <div className="avatar">
             <div
               className="image avatar_img"
-              onPointerEnter={() => setSelected(!selected)}
-              onPointerLeave={() => setSelected(!selected)}
+              onMouseEnter={() => setSelected(!selected)}
+              onMouseLeave={() => setSelected(!selected)}
               style={{
                 userSelect: "none",
-                backgroundImage: selected ? "url(assets/img/mayv.png)" : "url(assets/img/sound2.png)",
+                backgroundImage: (!goingUp && isMobile) || (selected && !isMobile) ? "url(assets/img/mayv.png)" : "url(assets/img/sound2.png)",
               }}
             ></div>
             {/* END AVATAR IMAGE */}
