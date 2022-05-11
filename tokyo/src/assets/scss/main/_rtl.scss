@@ -80,6 +80,13 @@
         margin-left: 0;
       }
     }
+    .leftpart .menu ul li .png {
+      margin-right: 0;
+      margin-left: 10px;
+      @media (max-width: 1200px) {
+        margin-left: 0;
+      }
+    }
   }
 }
 .rtl-p {

@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import Social from "./Social";
 
 const Home = () => {
+  const [selected, setSelected] = useState(true);
+
   return (
     <>
       <div className="tokyo_tm_home">
@@ -9,8 +11,10 @@ const Home = () => {
           <div className="avatar">
             <div
               className="image avatar_img"
+              onMouseLeave={() => setSelected(!selected)}
+              onMouseEnter={() => setSelected(!selected)}
               style={{
-                backgroundImage: "url(assets/img/slider/1.jpg)",
+                backgroundImage: selected ? "url(assets/img/mayv.png)" : "url(assets/img/sound2.png)",
               }}
             ></div>
             {/* END AVATAR IMAGE */}
@@ -20,6 +24,8 @@ const Home = () => {
             <h3 className="name">MAYV</h3>
             <p className="job">
               sick beats
+              <br/>
+              <img width={200} src="assets/img/loading4.png" alt="about" />
             </p>
             {/* END JOB */}
             <Social />
